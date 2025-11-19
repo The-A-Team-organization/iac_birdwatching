@@ -4,7 +4,7 @@ output "lb_public_ip" {
 }
 
 output "lb_subnet_id" {
-  value       = module.lb.subnet_id
+  value = module.lb.subnet_id
 }
 
 output "lb_security_group_id" {
@@ -38,5 +38,15 @@ output "db_security_group_id" {
 
 output "db_private_ip" {
   value = module.db.db_private_ip
+}
+
+output "images_bucket_name" {
+  description = "S3 bucket for images"
+  value       = module.images.bucket_name
+}
+
+output "images_bucket_arn" {
+  description = "ARN of Images S3 bucket"
+  value       = module.images.bucket_arn
 }
 
