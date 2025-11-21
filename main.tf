@@ -46,3 +46,10 @@ module "db" {
   allowed_cidrs  = [module.web.security_group_id]
 }
 
+module "images" {
+  source      = "./modules/s3-images"
+  env         = var.env
+  project     = "illuminati"
+  common_tags = var.common_tags
+}
+
